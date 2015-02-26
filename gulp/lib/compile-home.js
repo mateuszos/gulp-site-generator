@@ -93,8 +93,7 @@
                             // update the resource paths
                             nextPosts.forEach(function(post) {
                                 post.description = resolvePaths.resolve(post.meta.body, '../..');
-
-                                console.log(post);
+                                post.url = '../../' + post.meta.slug;
                             });
 
                             // create custom template data for this paginated page
